@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Симс5</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="css/all.css" rel="stylesheet">
+    <link href="css/grid style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="wrapper">
+
+        <div class="left">
+            <br>
+            <div>Имя: <b>Хот Кот</b></div>
+            <br>
+            <img src="img/Cat.jpg" alt="" width="319" height="383">
+            <br><br>
+            <div><img src="img/coin.png" alt="" width="25" height="25"> На вашем счету: <span id="money">50</span> рубасов</div>
+
+            <div class="проценты">
+                <div class ="lenta">
+                    <i class="fas fa-bed"></i> 
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" id="rest" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            <div class="проценты">
+                <div class ="lenta">
+                    <i class="fas fa-utensils"></i> 
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" id="food" role="progressbar" style="width: 0%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            <div class="проценты">
+                <div class ="lenta">
+                    <i class="far fa-smile-beam"></i> 
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" id="happy" role="progressbar" style="width: 0%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="right">
+            <div class="table">
+                <br>
+                
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Перекусить
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" onmouseleave="clearInfo()"onmouseover="printInfo(0, 5, 15, -20)" onclick="changeValues(0, 5, 15, -20)">Креветки с ласосем в сливочном соусе</a>
+                        <a class="dropdown-item" onmouseleave="clearInfo()"onmouseover="printInfo(0, 1, 10, -10)" onclick="changeValues(0, 1, 10, -10)">Дошик куриный</a>
+                        <a class="dropdown-item" onmouseleave="clearInfo()"onmouseover="printInfo(0, -5, 20, -3)" onclick="changeValues(0, -5, 20, -3)">Борщ из холодоса</a>
+                    </div>
+                </div>
+
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Отдохнуть
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" onmouseleave="clearInfo()"onmouseover="printInfo(5, 3, -5, 0)" onclick="changeValues(5, 3, -5, 0)">Поорать как додя</a>
+                        <a class="dropdown-item" onmouseleave="clearInfo()"onmouseover="printInfo(15, 4, -3, 0)" onclick="changeValues(15, 4, -3, 0)">Поспать в туалете</a>
+                        <a class="dropdown-item" onmouseleave="clearInfo()"onmouseover="printInfo(10, 5, -4, -2)" onclick="changeValues(10, 5, -4, -2)">Посмотреть телик</a>
+                    </div>
+                </div>
+
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Развлечения
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" onmouseleave="clearInfo()"onmouseover="printInfo(-15, 5, -15, 0)" onclick="changeValues(-15, 5, -15, 0)">Покатать сиську</a>
+                        <a class="dropdown-item" onmouseleave="clearInfo()"onmouseover="printInfo(-5, 10, -8, 0)" onclick="changeValues(-5, 10, -8, 0)">Посидеть на подоконнике</a>
+                        <a class="dropdown-item" onmouseleave="clearInfo()"onmouseover="printInfo(-25, 5, -20, 0)" onclick="changeValues(-25, 5, -20, 0)">Побегать по стенам</a>
+                    </div>
+                </div>
+
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Работа
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" onmouseleave="clearInfo()"onmouseover="printInfo(-10, -20, -3, +5)" onclick="changeValues(-10, -20, -3, +5)">Сидеть на ручках</a>
+                        <a class="dropdown-item" onmouseleave="clearInfo()"onmouseover="printInfo(-15, -15, -15, +10)" onclick="changeValues(-15, -15, -15, +10)">Копать горшочек</a>
+                        <a class="dropdown-item" onmouseleave="clearInfo()"onmouseover="printInfo(-20, -15, -8, +7)" onclick="changeValues(-20, -15, -8, +7)">Вылизывать шерстку</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="result" class="result">
+               
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="js/sims.js"></script>
+  </body>
+</html>
